@@ -16,4 +16,3 @@ This is a small demonstration of my coding and sound analysis prowess. Here I sh
 
 In this demonstration I use a recording of an American Yellow Warbler’s (Setophaga aestiva) song downloaded from xeno-canto. The code should automatically download the file. Credit goes to Peter Boesman (Peter Boesman, XC322837. Accessible at www.xeno-canto.org/322837)
 
- I am happy answering any questions or comments at the email alex.ramsey@okstate.edu.
