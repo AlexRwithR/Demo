@@ -20,3 +20,7 @@ extractlenght<-signalleng(song.extract)
 totallength<- sum(extractlenght) # here is the total length of the song
 #Now we can use my signal noise ratio function
 sig.pause.rat<-SPR(demrecord,song.extract, totallength)
+#SNR
+m <- cutw(demrecord, from = 1.22, to = 2.31)
+w<- cutw(demrecord, from = 14, to = 15.09)
+SNR<- 20*log10(abs(rms(m)-rms(w))/rms(w))
