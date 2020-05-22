@@ -14,8 +14,8 @@ tuneR::setWavPlayer('/usr/bin/afplay')
 # I orginally found this recording while working a larger project,
 # by selecting 10 yellow warbler song recordings. This specific file was chosen for it's demostration valu
 download.file('www.xeno-canto.org/322837/download',
-              "/Users/banjofreak625/Warblers/demorec.mp3", quiet = TRUE)
-rec.location<-"/Users/banjofreak625/Warblers/demorec.mp3"
+              "/Users/filelocation/demorec.mp3", quiet = TRUE)
+rec.location<-"/Users/filelocation/demorec.mp3"
 mp32wav()
 demrecord<-readMP3(rec.location)
 oscillo(demrecord)
