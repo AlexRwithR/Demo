@@ -1,0 +1,18 @@
+
+# Function to extract times for from and to 
+fromto <- function(filelist){
+  m <- vector('list', length(filelist))
+  for (i in 1:length(filelist)){
+    m[[i]] <- filelist[[i]][,1]
+    #  assign(paste0('yb', n), yw.sample[n, ])
+
+  }
+return(m)
+}
+m <- fromto(trytry)
+# and a loop to creat what is needed
+for (n in 1:length(m)) {
+  assign(paste0('s',n ), m[[n]])
+}
+
+
