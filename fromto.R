@@ -9,8 +9,7 @@ fromto <- function(filelist){
   }
 return(m)
 }
-m <- fromto(trytry)
-# and a loop to creat what is needed
+# and a loop to create seperate objects of each from and to value
 for (n in 1:length(m)) {
   assign(paste0('s',n ), m[[n]])
 }
