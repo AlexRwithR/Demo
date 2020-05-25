@@ -6,8 +6,12 @@ library(seewave)
 library(tidyverse)
 library(dplyr)
 
-tuneR::setWavPlayer('/usr/bin/afplay')
+tuneR::setWavPlayer('/usr/bin/afplay') # this will set the audioplayer for macs
+# for windows uses
+# tuneR::setWavPlayer(' "C:/Program Files/Windows Media Player/wmplayer.exe" ') 
+
 # www.xeno-canto.org/322837/download
+
 
 #Download the file
 # This file was recorded by Peter Boesman and posted on xeno-canto
