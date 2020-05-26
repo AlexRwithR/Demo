@@ -29,3 +29,5 @@ from.to.R- Script that takes a list created by the phrase.zoom() functoin and re
 
 In this demonstration I use a recording of an American Yellow Warbler’s (Setophaga aestiva) song downloaded from xeno-canto. The code should automatically download the file. Credit goes to Peter Boesman (Peter Boesman, XC322837. Accessible at www.xeno-canto.org/322837)
 
+Much of the sound analysis is done with the help and methods as described in "Sound Analysis and Synthesis with R" by Jérôme Sueur
+
