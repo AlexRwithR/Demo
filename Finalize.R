@@ -84,8 +84,3 @@ smax <- max.freq(demrecord, syl.list, f= 44100)
 syl.fmax <- lapply(smax,'[', TRUE, 1)
 summary(unlist(syl.fmax))
 
-oscillo(demrecord)
-axis(side =2)
-
-#max amplitude for each variation can be found, but only if the recording unit is calibrated
-#   and if the sample value's equivalents are known
