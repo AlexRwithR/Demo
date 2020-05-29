@@ -1,0 +1,31 @@
+#Function to find the maximum frequencies of multiple songs, phrases, and syllables, 
+max.freq<- function(file.name, syl.times, f) {
+  sl <- length(unlist(syl.times))
+  time.list<- vector('list', sl/2)
+  peak <- vector('list', sl/2)
+  s<-1
+  t <-2
+  m<- 1
+  for(i in 1:(sl/2)){
+    p <- length(syl.times[[m]])
+    if(t<p){ #this if/else sequence is mainly to roll over the 'm' object
+      time.list[[i]]<- seewave::spec(file.name, f= f,
+                                     from = syl.times[[m]][s], to =syl.times[[m]][t],plot = FALSE) # from = syl.times[[m]][s], to =syl.times[[m]][t],
+      peak[[i]]<- fpeaks(time.list[[i]], nmax = 1, plot = FALSE)
+      s <- s+2
+      t <- t+2
+      # if t is equal the length of the vector that is the final from value therefore m only needs to increase
+      # if t ==p
+    }
+    else{
+      time.list[[i]]<- seewave::spec(file.name,f=f,
+                               from = syl.times[[m]][s], to =syl.times[[m]][t], plot = FALSE)
+      peak[[i]]<- fpeaks(time.list[[i]], nmax = 1, plot = FALSE)
+    
+      m <- m+1
+      t <-2
+      s<- 1
+    }
+  }
+  return()
+}
