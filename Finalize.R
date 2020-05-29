@@ -67,3 +67,25 @@ sig4.auto<- timer(signal.4,f = f,
                   plot = TRUE)
 
 sig4.auto$r
+
+# Now for max frequency for each song
+
+fmax<-  max.freq(demrecord, syl.times =start.end, f =44100)
+# highest freq overall
+freq.max<-lapply(fmax, '[', TRUE, 1)
+
+summary(unlist(freq.max))
+
+# if you it's possible to do the same with each syllable
+# define the syllables
+syls<-syllfind(demrecord,song.extract, id =6, f= f)
+syl.list <- lapply(syls, "[", TRUE, 1) # This keeps only the time data
+smax <- max.freq(demrecord, syl.list, f= 44100)
+syl.fmax <- lapply(smax,'[', TRUE, 1)
+summary(unlist(syl.fmax))
+
+oscillo(demrecord)
+axis(side =2)
+
+#max amplitude for each variation can be found, but only if the recording unit is calibrated
+#   and if the sample value's equivalents are known
