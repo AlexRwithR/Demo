@@ -1,14 +1,22 @@
-phrase.zoom <-function(file.name, z =1, v = NULL){
+phrase.zoom <-function(file.name, z =1, v = NULL, r= 1){
   res.osc<- vector('list', z)
   envl<- env(file.name, plot =FALSE)
   f <- file.name@samp.rate
   if(!is.null(v)){
+    if(r==1){
     v<- matrix(v,byrow= TRUE, ncol =2)
     n <- nrow(v)
     for(i in 1:n){
       res.osc[[i]] <-oscillo(envl, from = v[i,1], to = v[i,2], f= f,
                              identify = TRUE, nidentify =2)
-    }
+    }}
+    else{
+      v<- matrix(v,byrow= TRUE, ncol =2)
+      n <- nrow(v)
+      for(i in 1:n){
+        res.osc[[i]] <-oscillo(envl, from = v[i,1], to = v[i,2], f= f,
+                               identify = TRUE, nidentify =r) 
+        }}
   }
   else{
   x<- 1
@@ -20,7 +28,6 @@ phrase.zoom <-function(file.name, z =1, v = NULL){
   }}
   return(res.osc)
   }
-
 
        
  
