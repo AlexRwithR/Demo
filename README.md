@@ -1,4 +1,6 @@
 # Demo
+
+Link to blog describing the project https://alexatallleks.wordpress.com/2020/06/11/sound-analysis-of-the-american-yellow-warbler/
 Libraries/Packages needed:
 
 library(tuneR)
